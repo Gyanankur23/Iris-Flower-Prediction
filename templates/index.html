@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iris ML Deployment</title>
+</head>
+<body>
+
+    <h2>Iris Flower Prediction</h2>
+
+    <form method="POST">
+        <label>Sepal Length:</label><br>
+        <input type="text" name="sepal_length" required><br><br>
+
+        <label>Sepal Width:</label><br>
+        <input type="text" name="sepal_width" required><br><br>
+
+        <label>Petal Length:</label><br>
+        <input type="text" name="petal_length" required><br><br>
+
+        <label>Petal Width:</label><br>
+        <input type="text" name="petal_width" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h3>🌸 Predicted Flower: {{ prediction }}</h3>
+    {% endif %}
+
+    {% if error %}
+        <h3 style="color:red;">{{ error }}</h3>
+    {% endif %}
+
+</body>
+</html>
